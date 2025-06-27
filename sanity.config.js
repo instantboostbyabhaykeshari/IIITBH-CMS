@@ -2,7 +2,8 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 // import {schemaTypes} from './schemaTypes'
-import faculty from './schemaTypes/faculty'
+import faculty_directory from './schemaTypes/faculty_directory.js'
+import faculty from './schemaTypes/faculty.js'
 
 export default defineConfig({
   name: 'default',
@@ -14,6 +15,6 @@ export default defineConfig({
   plugins: [structureTool(), visionTool()],
 
   schema: {
-    types: [faculty],
+    types: [faculty, faculty_directory]
   },
 })
